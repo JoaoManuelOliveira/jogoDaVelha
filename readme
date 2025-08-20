@@ -1,0 +1,42 @@
+# Jogo da Velha Darkzão
+
+Uma versão estilosa do clássico Jogo da Velha (tic-tac-toe) com estética “dark neon”, desenvolvida em HTML, CSS e JavaScript puro.  
+
+[**Veja ao vivo**](https://joaomanueloliveira.github.io/jogoDaVelha)
+
+---
+
+##  Tecnologias utilizadas
+
+- **HTML5**: estrutura semântica da página, menu, tabuleiro e ranking local.
+- **CSS3**: layout dark neon, efeitos visuais (neon glow, transições), responsividade via media queries.
+- **JavaScript (ES6+)**: lógica do jogo, criação dinâmica do tabuleiro, controle de jogadores, detecção de vitória/empate, atualização de placar local.
+- **Git + GitHub Pages**: hospedagem gratuita, versionamento e fácil compartilhamento do projeto.
+
+---
+
+##  Funcionalidades
+
+- Menu inicial para inserir os **nomes dos jogadores** ou usar os padrões.
+- Tabuleiro 3×3 recriado dinamicamente em JavaScript.
+- Turno alternado entre **X** e **O**, com visualização da vez e indicação clara no título.
+- Detecção automática de **vitória** (linhas, colunas e diagonais) e **empate ("velha")**.
+- Exibição clara da vitória ou empate no texto da interface.
+- **Ranking local**: placar de vitórias é incrementado para cada jogador durante a sessão.
+- Botão de **reiniciar** para jogar novamente sem perder o histórico do placar.
+- Layout dark neon atualizado com sombras e efeitos, totalmente responsivo (desktop e mobile).
+- Hospedagem no GitHub Pages, acessível via link público.
+
+---
+
+##  Visual
+
+A estética do jogo é inspirada no estilo **dark neon**, com fundo quase preto, fontes monoespaceadas, bordas e contornos brilhantes em roxo e verde, transições suaves e efeitos *hover* nas células.
+
+---
+
+##  Como usar
+
+1. Clone este repositório:
+   ```sh
+   git clone https://github.com/joaomanueloliveira/jogoDaVelha.git
