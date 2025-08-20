@@ -1,0 +1,209 @@
+/* fundo darkzão */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a0a;
+    /* quase preto */
+    font-family: 'Courier New', monospace;
+    color: #ccc;
+}
+
+/* esconde telas */
+.hidden {
+    display: none;
+}
+
+.container {
+    text-align: center;
+    color: #ccc;
+}
+
+/* título dark neon */
+h1,
+h2 {
+    color: #ccc;
+    text-shadow: 0 0 10px #8000ff88;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu input {
+    width: 220px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    background: #111;
+    color: #0f0;
+    border: 2px solid #8000ff55;
+    box-shadow: 0 0 8px #8000ff55;
+}
+
+.menu button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #8000ff;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 15px #0f0;
+}
+
+/* layout jogo painel central */
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #8000ff33;
+    margin: 0 auto;
+}
+
+/* tabuleiro centralizado */
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* tabuleiro */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.cell {
+    background: #111;
+    border: 2px solid #8000ff88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: #8000ff22;
+    transform: scale(1.05);
+}
+
+.cell.taken {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.cell.x {
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.cell.o {
+    color: #8000ff;
+    text-shadow: 0 0 10px #8000ff;
+}
+
+.winner {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #8000ff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0f0;
+    color: #000;
+}
+
+/* ranking fixo no canto superior esquerdo */
+.ranking {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    padding: 15px;
+    border: 2px solid #8000ff55;
+    border-radius: 12px;
+    background: #0a0a0a;
+    box-shadow: 0 0 15px #8000ff22 inset;
+    text-align: center;
+    z-index: 1000;
+}
+
+.ranking h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    text-shadow: 0 0 10px #8000ff77;
+}
+
+/* responsivo: celular */
+@media (max-width: 600px) {
+    .game {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ranking {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .ranking h2 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        font-size: 1.8rem;
+    }
+}

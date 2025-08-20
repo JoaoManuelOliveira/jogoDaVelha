@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha Darkzão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Menu inicial -->
+        <div id="menu" class="menu">
+            <h1>Jogo da Velha ⚡</h1>
+            <input type="text" id="playerX" placeholder="Nome do Jogador X">
+            <input type="text" id="playerO" placeholder="Nome do Jogador O">
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+
+        <!-- Área do jogo -->
+        <div id="game" class="game hidden">
+            <div class="board-container">
+                <h2 id="turnText">Vez do Jogador</h2>
+                <div class="board" id="board"></div>
+                <div class="winner" id="winner"></div>
+                <button onclick="resetGame()">Reiniciar</button>
+            </div>
+
+            <!-- Ranking -->
+            <div class="ranking">
+                <h2>🏆 Ranking</h2>
+                <p id="scoreX">Jogador X: 0 vitórias</p>
+                <p id="scoreO">Jogador O: 0 vitórias</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+
+</html>
